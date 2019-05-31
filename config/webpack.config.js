@@ -273,7 +273,8 @@ module.exports = function (webpackEnv) {
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
         '@': path.resolve(__dirname, '../src/images'), // 配置图片短路径
-        "api": path.resolve(__dirname, '../src/api') // 配置api接口请求短路径
+        "api": path.resolve(__dirname, '../src/api'), // 配置api接口请求短路径
+        "components": path.resolve(__dirname, '../src/components') // 配置木偶组件段路径
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

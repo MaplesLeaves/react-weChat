@@ -1,0 +1,40 @@
+.userInfo{
+  width: 80%;
+  margin:  auto;
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  &>.top{
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    &>div:nth-child(1){
+      display: flex;
+      align-content: space-between;
+      flex-wrap: wrap;
+      &>p{
+        width: 100%;
+      }
+    }
+  }
+  &>.list{
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #dddeee;
+    border-bottom: 1px solid #dddeee;
+    &>li{
+      padding-bottom: 20px;
+      &>span{
+        display: inline-block;
+        width: 70px;
+        text-align-last: justify;
+        margin-right:  20px;
+      }
+    }
+  }
+  &>.footer{
+    margin-top: 30px;
+    text-align: center
+  }
+}
