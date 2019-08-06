@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd';
 import LeftMenu from 'components/LeftMenu/Index'
+import { renderRoutes, matchRoutes } from 'react-router-config'
 const { Content, Sider } = Layout;
 export class Index extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ export class Index extends Component {
       initDone: true
     })
   }
-  callBack = (data) =>{
+  callBack = (data) => {
     this.setState({
       nowIndex: data
     })
@@ -47,14 +48,15 @@ export class Index extends Component {
       <div>
         <Layout style={{ height: '100%' }}>
           <Sider width={60}>
-            <LeftMenu index={this.state.nowIndex} data={this.state.listMenu} callBack={this.callBack}/>
+            <LeftMenu index={this.state.nowIndex} data={this.state.listMenu} callBack={this.callBack} />
           </Sider>
           <Content style={{
-            background:"#F5F5F5"
+            background: "#F5F5F5"
           }}>
             {
               this.state.initDone ?
-                this.props.children :
+
+                (this.props.route.routes) :
                 <div>
                   加载中
                 </div>
