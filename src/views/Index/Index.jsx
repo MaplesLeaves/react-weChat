@@ -56,7 +56,7 @@ export class Index extends Component {
             {
               this.state.initDone ?
 
-                (this.props.route.routes) :
+							renderRoutes(this.props.route.routes) :
                 <div>
                   加载中
                 </div>
