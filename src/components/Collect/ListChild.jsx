@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import {Avatar} from 'antd'
 import './listChild.less'
 export class ListChild extends Component {
-  static propTypes = {
+  // static propTypes = {
 
-  }
+  // }
   render() {
-    const {icon, title,text, time, source} = this.props.message
+    const { title,text, time, source} = this.props.message
     return (
       <li className='childList'>
         <div>

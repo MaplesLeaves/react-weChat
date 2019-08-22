@@ -9174,6 +9174,13 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-particles-js@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/react-particles-js/download/react-particles-js-2.6.0.tgz#159b657a1c2110e9350db5473a8d77b5fc0b52a0"
+  integrity sha1-FZtlehwhEOk1DbVHOo13tfwLUqA=
+  dependencies:
+    lodash "^4.17.11"
+
 react-redux@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npm.taobao.org/react-redux/download/react-redux-7.0.3.tgz#983c5a6de81cb1e696bd1c090ba826545f9170f1"

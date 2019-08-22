@@ -4,7 +4,7 @@
  * @Autor: maoleLeaves
  * @Date: 2019-05-29 09:07:10
  * @LastEditors: mapleleaves
- * @LastEditTime: 2019-05-31 16:35:30
+ * @LastEditTime: 2019-06-25 11:39:57
  * @weChat: 893774884
  */
 import React, { Component } from 'react'
@@ -15,7 +15,6 @@ export class Index extends Component {
   }
   callBack = (data) => {
     this.props.callBack(data)
-    
   }
   render() {
     return (

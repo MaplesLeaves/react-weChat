@@ -2,7 +2,8 @@ import axios from 'axios'
 import { message , Modal} from 'antd';
 // create an axios instance
 const service = axios.create({
-  baseURL: process.env.BASE_API, // api的base_url
+  // baseURL: process.env.BASE_API, // api的base_url
+  baseURL: 'http://192.168.0.103:3001/',
   timeout: 0 // request timeout
 })
 // request interceptor
@@ -18,17 +19,16 @@ service.interceptors.request.use(config => {
 service.interceptors.response.use(
   response => {
     const res = response.data
-    if (res.status !== 200) {
-      if (res.status === 401) {
+    if (res.code !== 200) {
+      if (res.code === 401) {
         Modal.error({
           title: '提示',
           content: '您的token已过期，请重新登录',
           onOk()  { // 点击确定进行回调
-
           }
         });
       }else{
-        message.error(res.data.msg); // 当业务出现其他错误类型时进行错误弹窗提示
+        message.error(res.msg); // 当业务出现其他错误类型时进行错误弹窗提示
       }
       return Promise.reject('error')
     } else { // 当返回值为200 时进行数据抛出 

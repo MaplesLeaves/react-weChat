@@ -4,7 +4,7 @@
  * @Autor: maoleLeaves
  * @Date: 2019-05-30 17:58:48
  * @LastEditors: mapleleaves
- * @LastEditTime: 2019-05-31 15:37:38
+ * @LastEditTime: 2019-06-30 15:59:56
  * @weChat: 893774884
  */
 import React, { Component } from 'react'
@@ -26,7 +26,7 @@ export class Index extends Component {
         </Sider>
         <Layout>
         <Header style={{
-          background: '#EAE7E6'
+          background: 'rgb(245, 245, 245)'
         }}>全部收藏</Header>
           <Content>
             <CollectList/>

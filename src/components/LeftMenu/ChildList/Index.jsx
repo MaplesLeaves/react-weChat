@@ -14,9 +14,9 @@ export class Index extends Component {
   render() {
     return (
       
-      <li className='iconlist' style={{backgroundColor: this.props.message.key === this.props.index ? 'red' : 'yellow'}} onClick={this.handClilck}>
+      <li className='iconlist' style={{color: this.props.message.key === this.props.index ? 'green' : 'white'}} onClick={this.handClilck}>
           {
-            this.props.message.path ? <Link to={this.props.message.path}>{this.props.message.icon}</Link> : this.props.message.icon
+            this.props.message.path ? <Link style={{color: this.props.message.key === this.props.index ? 'green' : 'white'}} to={this.props.message.path}>{this.props.message.icon}</Link> : this.props.message.icon
           }
       </li>
       

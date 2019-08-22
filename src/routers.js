@@ -4,10 +4,12 @@ import Index from './views/Index/Index'
 import ChatList from './views/chatList/Index'
 import TalkMessage from './views/talkMessage/Index'
 import Collect from './views/Collect/Index'
+import Login from './views/Login/Index'
 
 const BasicRoute = () => (
   <BrowserRouter>
     <Switch>
+    <Route path='/login' component={Login} />
       <Index>
         <Switch>
           <Route path='/chatList' component={ChatList} />

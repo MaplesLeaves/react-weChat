@@ -39,7 +39,6 @@ export class CollectList extends Component {
     }
   }
   click = () => {
-    console.error(11131)
   }
   render() {
     return (
