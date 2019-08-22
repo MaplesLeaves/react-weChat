@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd';
 import LeftMenu from 'components/LeftMenu/Index'
+<<<<<<< HEAD
 import { getAllInfo } from 'api/Http';
 import { connect } from 'react-redux';
 import Socket from 'api/socket';
+=======
+import { renderRoutes, matchRoutes } from 'react-router-config'
+>>>>>>> 04f9ca22a89fefaaedf974d6ea2b95f5b9f4792f
 const { Content, Sider } = Layout;
 export class Index extends Component {
   constructor(props) {
@@ -112,7 +116,8 @@ export class Index extends Component {
           }}>
             {
               this.state.initDone ?
-                this.props.children :
+
+							renderRoutes(this.props.route.routes) :
                 <div>
                   加载中
                 </div>
