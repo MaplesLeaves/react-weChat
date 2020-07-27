@@ -1,9 +1,18 @@
+/*
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: mapleLeaves
+ * @Date: 2020-07-25 21:56:47
+ * @LastEditors: mapleleaves
+ * @LastEditTime: 2020-07-25 22:20:07
+ * @weChat: 893774884
+ */ 
 import axios from 'axios'
 import { message , Modal} from 'antd';
 // create an axios instance
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api的base_url
-  baseURL: 'http://192.168.0.103:3001/',
+  baseURL: 'http://192.168.123.118:3001/',
   timeout: 0 // request timeout
 })
 // request interceptor

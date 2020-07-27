@@ -4,7 +4,7 @@
  * @Autor: maoleLeaves
  * @Date: 2019-05-29 16:44:42
  * @LastEditors: mapleleaves
- * @LastEditTime: 2019-06-29 17:38:58
+ * @LastEditTime: 2020-07-25 22:23:59
  * @weChat: 893774884
  */
 import React, { Component } from 'react'
@@ -176,11 +176,12 @@ export class Index extends Component {
     }
   }
   componentDidMount() {
-    setTimeout(() => {
       this.refs.messageList.scrollTop = this.refs.messageList.scrollHeight
-    }, 0)
   }
+  
+
   componentDidUpdate() {
+    this.refs.messageList.scrollTop = this.refs.messageList.scrollHeight
     /**
      * @description: 进行判断  当父组件有新的值传递过来  那么我们可以将其和当前的新值进行合并产生新的列表进行渲染
      * @Date: 2019-05-30 09:55:21

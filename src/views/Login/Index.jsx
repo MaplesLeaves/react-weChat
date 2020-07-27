@@ -21,7 +21,7 @@ class Login extends React.Component {
             message.success(res.msg);
             this.props.addUser(res.data);
             setTimeout(()=> {
-              this.props.history.push('/talkMessage');
+              this.props.history.push('/index/talkMessage');
             }, 1000)
           }
         }).catch((err) => {
@@ -55,7 +55,8 @@ class Login extends React.Component {
               value: 'random'
             },
             size:{
-              value	: 5
+              value	: 5,
+              anim:{enable: true}
             },
             number: {
               value: 100
@@ -64,7 +65,7 @@ class Login extends React.Component {
               attract:{
                 enable:true
               },
-              speed: 10
+              speed: 20
             },
             line_linked: {
               shadow: {

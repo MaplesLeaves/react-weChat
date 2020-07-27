@@ -4,7 +4,7 @@ import MessageList from 'components/MessageList/Index'
 import { Layout } from 'antd';
 import UserList from 'components/UserList/Index'
 import { connect } from 'react-redux'
-import Item from 'antd/lib/list/Item';
+// import Item from 'antd/lib/list/Item';
 const { Content, Header, Footer, Sider } = Layout;
 export class Index extends Component {
   constructor(props) {

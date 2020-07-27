@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import { Layout } from 'antd';
 import LeftMenu from 'components/LeftMenu/Index'
-<<<<<<< HEAD
 import { getAllInfo } from 'api/Http';
 import { connect } from 'react-redux';
 import Socket from 'api/socket';
-=======
 import { renderRoutes, matchRoutes } from 'react-router-config'
->>>>>>> 04f9ca22a89fefaaedf974d6ea2b95f5b9f4792f
 const { Content, Sider } = Layout;
 export class Index extends Component {
   constructor(props) {
@@ -22,17 +19,17 @@ export class Index extends Component {
         },
         {
           icon: '聊天',
-          path: '/talkMessage',
+          path: '/index/talkMessage',
           key: 2
         },
         {
           icon: '好友',
-          path: '/chatList',
+          path: '/index/chatList',
           key: 3
         },
         {
           icon: '收藏',
-          path: '/collect',
+          path: '/index/collect',
           key: 4
         }
       ],
@@ -71,7 +68,7 @@ export class Index extends Component {
      */
     this.socket = new Socket({
       // socketUrl: `ws://192.168.0.103:9536?chatNum=${this.props.userInfo.weChatNum}`,
-      socketUrl: 'ws://192.168.0.103:9536?chatNum=mapleleaves_1',
+      socketUrl: 'ws://192.168.123.118:9536?chatNum=mapleleaves_1',
       timeout: 5000,
       socketMessage: (receive) => {
         this.props.addtalk(JSON.parse(receive.data));
@@ -105,6 +102,7 @@ export class Index extends Component {
     })
   }
   render() {
+    console.error(this.props.route.routes)
     return (
       <div>
         <Layout style={{ height: '100%' }}>
@@ -114,9 +112,9 @@ export class Index extends Component {
           <Content socket={this.socket} style={{
             background: "#F5F5F5"
           }}>
+            
             {
               this.state.initDone ?
-
 							renderRoutes(this.props.route.routes) :
                 <div>
                   加载中
